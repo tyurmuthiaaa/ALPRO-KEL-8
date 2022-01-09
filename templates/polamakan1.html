@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cekkol : cek kadar kolesterol</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" type="text/css"  href="{{url_for ('static',filename='style.css')}}">
+  <link rel="stylesheet" type="text/css"  href="{{url_for ('static',filename='bootstrap.css')}}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="headatas">
+	<div class="container ">
+  	<header class="blog-header py-3">
+		  <div class="row flex-nowrap justify-content-between align-items-center ">
+	      <div class="col-6 text-center ">
+					<h1 class="judul">SELAMAT DATANG DI CEKKOL</h1>
+          <text class="text">Cek Kadar Kolesterol</text>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg">
+  <div class="navbar-collapse justify-content-md-center" id="navbarsExample10">
+    <ul class="nav navbar-nav menu_nav justify-content-end">
+      <li class="nav-item"><a class="nav-link" href="{{url_for ('home')}}">Home</a></li> 
+      <li class="nav-item active"><a class="nav-link" href="{{url_for ('prediksi')}}">Prediction</a></li> 
+      <li class="nav-item"><a class="nav-link" href="{{url_for ('about')}}">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- awal isi konten -->
+
+<div id="team">
+  <div class="container">
+    <div id="row">
+      <div class="col-md-6">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="section-title">
+            <h2>Pola Makan Sehat untuk Mencegah Kadar Kolesterol Tinggi</h2> <h4>Cocok untuk Segala Usia</h4>
+          </div>
+          <p><strong>1. Tidak Mengkonsumsi Makanan yang Mengandung Lemak Jenuh secara Berlebihan</strong> <br> Seperti : daging merah, susu, keju, kue, gorengan.</p>
+          <p><strong>2. Mengkonsumsi Buah dan Sayur</strong> <br> Seperti : apel, pir, mangga, brokoli, bayam, kubis, buncis, alpukat.</p>
+          <p><strong>3. Tidak Mengkonsumsi Minuman yang Mengandung Alkohol secara Berlebihan</strong> <br> Seperti : wine, soju, bir, vodka, tequila.</p>
+          <p><strong>4. Mengkonsumsi Biji - Bijian</strong> <br> Seperti : kacang merah, kacang almond, kacang kedelai, kacang polong, oatmeal.</p>
+          <p><strong>5. Mengkonsumsi Makanan yang Mengandung Omega-3</strong> <br> Seperti : ikan salmon, tuna, sarden, kacang kenari.</p>
+          <p><strong>6. Tidak Merokok</strong> <br> Bagi yang tidak merokok, sedangkan yang merokok dianjurkan untuk berhenti.</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3 col-md-offset-1">
+        <div class="team-img">
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/KPoiynkDFX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+     
+
+<!-- akhir isi konten -->
+<!-- footer -->
+<div id="footer">
+  <div class="container padding-vert-30 margin-top-60">
+    <div class="row">
+       <div class="col-md-4 margin-bottom-20">
+         <h1 class="margin-bottom-10">CEKKOL</h1>
+         <p>Cek Kadar Kolesterol</p>
+        </div>
+        <div class="col-md-3 margin-bottom-10">
+          <ul class="menu">
+            <li>
+              <a href="{{url_for ('home')}}">Home</a>
+            </li>
+            <li>
+              <a href="{{url_for ('prediksi')}}">Prediction</a>
+            </li>
+            <li>
+              <a href="{{url_for ('about')}}">About Us</a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2 margin-bottom-20 padding-vert-30">
+          <h4 class="margin-bottom-10">Follow Us</h4>
+          <p>
+          <span class="fa fa-twitter">Twitter : </span>@tsdunair
+          <br>
+          <span class="fa fa-facebook">Facebook : </span>@tsdunair
+          <br>
+          <span class="fa fa-instagram">Instagram : </span>@tsdunair
+          </p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="copyright text-center" style="height:50px;padding-top:50px;">
+          <p>© Copyright 2021</p>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- akhir footer -->
+</body>
+</html>

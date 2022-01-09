@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cekkol : cek kadar kolesterol</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" type="text/css"  href="{{url_for ('static',filename='style.css')}}">
+  <link rel="stylesheet" type="text/css"  href="{{url_for ('static',filename='bootstrap.css')}}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="headatas">
+	<div class="container ">
+  	<header class="blog-header py-3">
+		  <div class="row flex-nowrap justify-content-between align-items-center ">
+	      <div class="col-6 text-center ">
+					<h1 class="judul">SELAMAT DATANG DI CEKKOL</h1>
+          <text class="text">Cek Kadar Kolesterol</text>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg">
+  <div class="navbar-collapse justify-content-md-center" id="navbarsExample10">
+    <ul class="nav navbar-nav menu_nav justify-content-center">
+      <li class="nav-item"><a class="nav-link" href="{{url_for ('home')}}">Home</a></li> 
+      <li class="nav-item active"><a class="nav-link" href="{{url_for ('prediksi')}}/">Prediction</a></li> 
+      <li class="nav-item"><a class="nav-link" href="{{url_for ('about')}}">About Us</a></li>
+    </ul>
+  </div>
+
+<!-- awal isi konten -->
+<div id="team">
+  <div class="container">
+    <div id="row">
+      <div class="col-md-6">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="section-title">
+            <h2>about us</h2>
+          </div>
+          <p><strong>CEKKOL : Cek Kadar Kolesterol</strong> merupakan website berbasis expert system yang memiliki fungsi utama untuk memprediksi kadar kolesterol yang ada didalam tubuh. Program expert system ini dibuat dengan menggunakan bahasa pemrograman python.
+            Website ini juga menawarkan rekomendasi terkait pola makan dan lifestyle untuk masyarakat yang terindikasi memiliki kadar kolesterol yang rendah maupun yang memiliki kadar kolesterol tinggi. 
+            Dengan adanya website berbasis expert system ini, diharapkan dapat membantu masyarakat yang terindikasi kadar kolesterol tinggi maupun rendah untuk melakukan pencegahan sejak dini serta dapat 
+            memberikan solusi untuk memperbaiki pola makan dan pola hidup (lifestyle) yang terbaik.</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-3 col-md-offset-1">
+        <div class="team-img"><img src="{{url_for ('static',filename='img/logo.jpg')}}" alt="..."></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="features" class="text-center">
+  <div class="container">
+    <div class="section-title">
+      <h2>AUTHOR</h2>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <div class="features-item">
+          <img src="{{url_for ('static',filename='img/Tyur.jpeg')}}" class="abc" alt="">
+          <h3>TYUR MUTHIA WARDHA VIANI</h3>
+          <P><strong>Nama : </strong> Tyur Muthia Wardha Viani</P>
+          <P><strong>Asal : </strong> Lamongan</P>
+          <P><strong>Hobi : </strong> Main Musik, Olahraga</P>
+          <P><strong>Pekerjaan : </strong> Mahasiswa</P>
+          <P><strong>Institusi : </strong> Universitas Airlangga</P>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="features-item">
+          <img src="{{url_for ('static',filename='img/Lidya.jpeg')}}" class="abc" alt="">
+          <h3>LIDYA SEPTI ANDINI</h3>
+          <P><strong>Nama : </strong> Lidya Septi Andini</P>
+          <P><strong>Asal : </strong> Sidoarjo</P>
+          <P><strong>Hobi : </strong> Membaca Novel & Komik, Nonton Drama</P>
+          <P><strong>Pekerjaan : </strong> Mahasiswa</P>
+          <P><strong>Institusi : </strong> Universitas Airlangga</P>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="features-item">
+          <img src="{{url_for ('static',filename='img/Anis.jpeg')}}" class="abc" alt="">
+          <h3>ANISYAUL FITRIA</h3>
+          <P><strong>Nama : </strong> Anisyaul Fitria</P>
+          <P><strong>Asal : </strong> Mojokerto</P>
+          <P><strong>Hobi : </strong> Mencari informasi lebih tentang dunia bisnis </P>
+          <P><strong>Pekerjaan : </strong> Mahasiswa</P>
+          <P><strong>Institusi : </strong> Universitas Airlangga</P>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="features-item">
+          <img src="{{url_for ('static',filename='img/Kevin.jpeg')}}" class="abc" alt="">
+          <h3>KEVIN CAESAR</h3>
+          <P><strong>Nama : </strong> Kevin Caesar</P>
+          <P><strong>Asal : </strong> DKI Jakarta</P>
+          <P><strong>Hobi : </strong> Main Trading Saham</P>
+          <P><strong>Pekerjaan : </strong> Mahasiswa</P>
+          <P><strong>Institusi : </strong> Universitas Airlangga</P>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- akhir isi konten -->
+<!-- footer -->
+<div id="footer">
+  <div class="container padding-vert-30 margin-top-60">
+    <div class="row">
+       <div class="col-md-4 margin-bottom-20">
+         <h1 class="margin-bottom-10">CEKKOL</h1>
+         <p>Cek Kadar Kolesterol</p>
+        </div>
+        <div class="col-md-3 margin-bottom-10">
+          <ul class="menu">
+            <li>
+                <a href="{{url_for ('home')}}">Home</a>
+            </li>
+            <li>
+                <a href="{{url_for ('prediksi')}}">Prediction</a>
+            </li>
+            <li>
+                <a href="{{url_for ('about')}}">About Us</a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2 margin-bottom-20 padding-vert-30">
+          <h4 class="margin-bottom-10">Follow Us</h4>
+          <p>
+          <span class="fa fa-twitter">Twitter : </span>@tsdunair
+          <br>
+          <span class="fa fa-facebook">Facebook : </span>@tsdunair
+          <br>
+          <span class="fa fa-instagram">Instagram : </span>@tsdunair
+          </p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="copyright text-center" style="height:50px;padding-top:50px;">
+          <p>© Copyright 2021</p>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- akhir footer -->
+</body>
+</html>

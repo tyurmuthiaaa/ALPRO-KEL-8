@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cekkol : cek kadar kolesterol</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" type="text/css"  href="{{url_for ('static',filename='style.css')}}">
+  <link rel="stylesheet" type="text/css"  href="{{url_for ('static',filename='bootstrap.css')}}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="headatas">
+	<div class="container ">
+  	<header class="blog-header py-3">
+		  <div class="row flex-nowrap justify-content-between align-items-center ">
+	      <div class="col-6 text-center ">
+					<h1 class="judul">SELAMAT DATANG DI CEKKOL</h1>
+          <text class="text">Cek Kadar Kolesterol</text>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg">
+  <div class="navbar-collapse justify-content-md-center" id="navbarsExample10">
+    <ul class="nav navbar-nav menu_nav justify-content-end">
+      <li class="nav-item"><a class="nav-link" href="{{url_for ('home')}}">Home</a></li> 
+      <li class="nav-item active"><a class="nav-link" href="{{url_for ('prediksi')}}">Prediction</a></li> 
+      <li class="nav-item"><a class="nav-link" href="{{url_for ('about')}}">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-contact100">
+    <div class="wrap-contact100">
+        <form class="contact100-form validate-form" action="http://127.0.0.1:5000/prediksi/" method="POST">
+            <fieldset>
+            <span class="contact100-form-title">
+                <strong>CEK KADAR KOLESTEROL!</strong>
+            </span>
+            <div class="form-group  row validate-input">
+              <label for="age"><b>Usia</b></label>
+              <input type="number" class="form-control" id="age"  name="age" required>
+            </div>
+
+            <div class="form-group  row validate-input" >
+              <label for="sex"><b>Jenis Kelamin</b></label>
+              <select class="form-control" id="sex"  name="sex" required>
+                <option disabled selected value> -- Select an Option -- </option>
+                <option value = "1">Laki-Laki</option>
+                <option value = "0">Perempuan</option>
+              </select>
+            </div>
+
+            <div class="form-group  row validate-input" >
+              <label for="lokasi_nyeri"><b>Daerah nyeri Dada</b></label>
+              <select class="form-control" id="lokasi_nyeri"  name="lokasi_nyeri" required>
+                <option disabled selected value> -- Select an Option -- </option>
+                <option value = "1">Tidak Ada Gejala</option>
+                <option value = "2">Nyeri Biasa</option>
+                <option value = "3">Angina Atipikal</option>
+                <option value = "4">Angina Khas</option>
+              </select>
+              </div>
+
+            <div class="form-group  row validate-input">
+              <label for="jenis_nyeri"><b>Jenis Nyeri</b></label>
+							<select class="form-control" id="jenis_nyeri" name="jenis_nyeri" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "1">Substernal</option>
+							  <option value = "0">Lainnya</option>
+							</select>
+            </div>
+
+            <div class="form-group  row validate-input">
+              <label for="kesemutan"><b>Merasakan Kesemutan</b></label>
+							<select class="form-control" id="kesemutan" name="kesemutan" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "0">Tidak</option>
+							  <option value = "1">Benar</option>
+							</select>
+            </div>
+            <div class="container-contact100-form-btn">
+                <div class="wrap-contact100-form-btn">
+                    <div class="contact100-form-bgbtn"></div>
+                    <input class="btn btn-primary" type="submit" value="Result">
+                </div>
+            </div>
+            <strong style="text-align: center;">{{result}}</strong>
+            <strong style="text-align: center;">{{result2}}</strong>
+            {% if result == "Anda berpotensi terkena penyakit kolesterol!" %}
+            <br>
+             <a href="/polamakan/">Pola Makan Sehat</a>
+            {% elif result == "Anda tidak berpotensi terkena penyakit kolesterol!" %}
+            <br>
+             <a href="/polamakan1/">Pola Makan Sehat</a>
+            {% endif %}
+          </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<!-- akhir isi konten -->
+<!-- footer -->
+<div id="footer">
+  <div class="container padding-vert-30 margin-top-60">
+    <div class="row">
+       <div class="col-md-4 margin-bottom-20">
+         <h1 class="margin-bottom-10">CEKKOL</h1>
+         <p>Cek Kadar Kolesterol</p>
+        </div>
+        <div class="col-md-3 margin-bottom-10">
+          <ul class="menu">
+            <li>
+              <a href="{{url_for ('home')}}">Home</a>
+            </li>
+            <li>
+              <a href="{{url_for ('prediksi')}}">Prediction</a>
+            </li>
+            <li>
+              <a href="{{url_for ('about')}}">About Us</a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2 margin-bottom-20 padding-vert-30">
+          <h4 class="margin-bottom-10">Follow Us</h4>
+          <p>
+          <span class="fa fa-twitter">Twitter : </span>@tsdunair
+          <br>
+          <span class="fa fa-facebook">Facebook : </span>@tsdunair
+          <br>
+          <span class="fa fa-instagram">Instagram : </span>@tsdunair
+          </p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="copyright text-center" style="height:50px;padding-top:50px;">
+          <p>© Copyright 2021</p>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- akhir footer -->
+</body>
+</html>
